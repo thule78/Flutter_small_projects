@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'day003/app_d3_3.dart';
+import 'apps/routers/my_app.dart';
 
 void main() {
-  runApp(const MaterialApp(home: AppD33()));
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MyApp());
 }
-
- 

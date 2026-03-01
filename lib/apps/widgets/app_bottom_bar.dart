@@ -12,27 +12,35 @@ class AppBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: currentIndex,
-      type: BottomNavigationBarType.fixed,      items: const [
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: const Color(0xFF2B2B2B), // active color
+      unselectedItemColor: Colors.grey,           // inactive color
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: 'Home',
+          label:"Home"
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.category),
-          label: 'Category',
+          icon: Icon(Icons.favorite),
+          label:"like"
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.shopping_cart),
-          label: 'Cart',
+          label:"cart"
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.notifications),
+          label:"notification"
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label:"profile"
         ),
       ],
       onTap: (index) {
         switch (index) {
           case 0:
             Navigator.pushNamed(context, RouterName.home);
-            break;
-          case 1:
-            Navigator.pushNamed(context, RouterName.category);
             break;
           case 2:
             Navigator.pushNamed(context, RouterName.cart);

@@ -14,7 +14,7 @@ class CartScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Cart')),
-      bottomNavigationBar: const AppBottomBar(currentIndex: 1),
+      bottomNavigationBar: const AppBottomBar(currentIndex: 2),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
